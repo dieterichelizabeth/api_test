@@ -1,0 +1,89 @@
+{
+    listcomponents: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'List all API components office by the IDX API.'
+    },
+    listmethods: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'List all the methods in this component including supported actions,\n' +
+        '                              method status (in developement, active, depreciated, and sunset), and a description.'
+    },
+    approvedMLS: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'deprecated',
+      description: 'Replaced by the method "approvedmls" in order to make method naming consistant.'
+    },
+    approvedmls: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of IDs and names for all MLSs approved for display on a client account.',
+      availableReturnFields: [ 'id', 'name' ]
+    },
+    cities: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of all cities available in the data for an MLS.',
+      availableReturnFields: [ 'cityID', 'cityName', 'stateAbrv', 'mlsPtID', 'occurances' ]
+    },
+    counties: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of all counties available in the data for an MLS.',
+      availableReturnFields: [ 'countyID', 'countyName', 'stateAbrv', 'mlsPtID', 'occurances' ]
+    },
+    zipcodes: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of all zipcodes available in the data for an MLS.',
+      availableReturnFields: [ 'zipcode', 'stateAbrv', 'mlsPtID', 'occurances' ]
+    },
+    postalcodes: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of all postalcodes available in the data for an MLS.',
+      availableReturnFields: [ 'id', 'stateAbrv', 'mlsPtID', 'occurances' ]
+    },
+    prices: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A sum of prices by property type for an MLS.',
+      availableReturnFields: [ 'priceSum', 'priceByPt' ]
+    },
+    propertytypes: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of property types available in the MLS.',
+      availableReturnFields: [
+        'mlsPtID',
+        'mlsPropertyType',
+        'parentPtID',
+        'parentPropertyType',
+        'parentPt',
+        'propSubTypes'
+      ]
+    },
+    propertycount: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A count of the number of MLS listings available in a given city, county or zipcode.'
+    },
+    age: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'The times an MLS was last downloaded or updated.',
+      availableReturnFields: [ 'lastProcess', 'lastDownload' ]
+    },
+    searchfields: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of all MLSs fields that are available for search given MLS rules and guidelines.',
+      availableReturnFields: [ 'name', 'displayName', 'mlsPtID', 'parentPtID' ]
+    },
+    searchfieldvalues: {
+      supported: { GET: true, POST: false, PUT: false, DELETE: false },
+      status: 'active',
+      description: 'A list of values for a given mls field.'
+    }
+  }
